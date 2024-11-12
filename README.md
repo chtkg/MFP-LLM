@@ -23,7 +23,7 @@ For more implementation details, refer to MFP_LLM.py.
 
 Installation
 
-Prerequisites
+Requirements
 
 torch==2.2.2
 
