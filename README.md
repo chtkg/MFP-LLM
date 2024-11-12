@@ -11,8 +11,6 @@ SHMetro: Data from the Shanghai metro system covering the period from July 1, 20
 
 HZMetro: Data from the Hangzhou metro system covering January 2019. This dataset includes 80 stations with 248 physical edges, handling an average daily passenger flow of 2.35 million. 
 
-We provide preprocessed datasets, which you can access:
-
 Model Architecture
 
 The MFP-LLM model utilizes a BERT-based architecture, specifically adapted for urban metro flow time series data. Key settings include:
