@@ -20,3 +20,7 @@ Training: 10 epochs with a batch size of 32.
 Attention Mechanism: Multi-head attention is employed to capture complex temporal dependencies within the time series data.
 Patch Embedding: Time series data is divided into overlapping patches, with each patch encoded using a positional embedding.
 For more implementation details, refer to MFP_LLM.py.
+
+Installation
+
+Prerequisites
