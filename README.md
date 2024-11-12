@@ -13,3 +13,11 @@ HZMetro: Data from the Hangzhou metro system covering January 2019. This dataset
 
 Model Architecture
 
+The MFP-LLM model utilizes a BERT-based architecture, specifically adapted for urban metro flow time series data. Key settings include:
+
+Time Dimension (T): Set to 24, representing 15-minute intervals across 6 hours.
+Optimizer: Adam optimizer with a learning rate of 0.0001.
+Training: 10 epochs with a batch size of 32.
+Attention Mechanism: Multi-head attention is employed to capture complex temporal dependencies within the time series data.
+Patch Embedding: Time series data is divided into overlapping patches, with each patch encoded using a positional embedding.
+For more implementation details, refer to model_MFP_LLM.py.
