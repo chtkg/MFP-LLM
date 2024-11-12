@@ -24,3 +24,22 @@ For more implementation details, refer to MFP_LLM.py.
 Installation
 
 Prerequisites
+
+torch==2.2.2
+
+accelerate==0.28.0
+
+matplotlib==3.7.0
+
+numpy==1.23.5
+
+pandas==1.5.3
+
+scikit_learn==1.2.2
+
+tqdm==4.65.0
+
+transformers==4.31.0
+
+deepspeed==0.14.0
+
