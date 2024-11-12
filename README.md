@@ -12,3 +12,4 @@ SHMetro: Data from the Shanghai metro system covering the period from July 1, 20
 HZMetro: Data from the Hangzhou metro system covering January 2019. This dataset includes 80 stations with 248 physical edges, handling an average daily passenger flow of 2.35 million. Passenger flow is recorded every 15 minutes, capturing inflow and outflow data at each station. The dataset is split into training (January 1-18), validation (January 19-20), and testing (January 21-25) sets.
 
 Model Architecture
+
