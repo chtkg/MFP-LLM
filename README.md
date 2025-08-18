@@ -1,22 +1,39 @@
-# MFP-LLM
-Overview
+# Interpretable Urban Metro Flow Prediction via Spatio-Temporal Graph Learning and Large Language Models  
 
-MFP-LLM aims to utilize large language models (LLMs) for metro passenger flow prediction. By training on large-scale datasets, this project uses advanced natural language processing techniques to predict passenger flow for different time periods and metro lines. This method provides precise forecasts, helping optimize operations and improve service efficiency for metro systems.
+This repository contains the official implementation of **MFP-LLM**, a novel framework for **urban metro passenger flow prediction** that integrates **spatio-temporal graph learning** with **instruction-driven large language models (LLMs)**.  
 
-Datasets
+🚇 The goal is to achieve **accurate, robust, and interpretable** metro flow prediction under full, few-shot, and zero-shot settings.  
 
-The model is evaluated using metro passenger flow datasets from two Chinese cities:
+---
 
-SHMetro: Data from the Shanghai metro system covering the period from July 1, 2016, to September 30, 2016. This dataset includes records from 288 metro stations with 958 physical edges, handling an average of 8.82 million passenger transactions daily.
+## ✨ Key Features  
 
-HZMetro: Data from the Hangzhou metro system covering January 2019. This dataset includes 80 stations with 248 physical edges, handling an average daily passenger flow of 2.35 million. 
+- **Spatio-Temporal Encoder**: Attention-based encoder that jointly captures spatial and temporal dependencies in metro networks.  
+- **Representation Alignment Module**: Transforms structured spatiotemporal features into token sequences compatible with LLMs.  
+- **LLM-Enhanced Prediction**: Leverages reasoning and generalization capabilities of pre-trained LLMs with minimal task-specific fine-tuning.  
+- **Interpretability**: Generates **natural language explanations** of prediction results to improve transparency and decision support.  
+- **Strong Generalization**: Robust performance across datasets and unseen conditions.  
 
-Model Architecture
+---
 
-The MFP-LLM model utilizes a Llama model, specifically adapted for urban metro flow time series data. Key settings include:
-Time Dimension (T): Set to 12, representing 15-minute intervals across 6 hours.
-Optimizer: Adam optimizer with a learning rate of 0.0001.
-Training: 10 epochs with a batch size of 32.
+## 📊 Datasets  
+
+We use two large-scale real-world metro datasets:  
+
+- **HZMetro** 
+  - Hangzhou Metro system  
+  - Duration: **Jan 1 – Jan 25, 2019 (25 days)**  
+  - **80 stations**, aggregated traffic statistics  
+  - Time resolution: **15-minute intervals**  
+  - Records both **inflow** and **outflow** of passengers  
+
+- **SHMetro**  
+  - Shanghai Metro system  
+  - Duration: **Jul 1 – Sep 30, 2016**  
+  - **288 stations**, high spatiotemporal resolution  
+  - Time resolution: **15-minute intervals**  
+  - Provides fine-grained passenger flow dynamics  
+
 For more implementation details, refer to run_MFP-LLM.py.
 
 Installation
@@ -40,4 +57,11 @@ tqdm==4.65.0
 transformers==4.31.0
 
 deepspeed==0.14.0
+
+## 🚀 Quick Start  
+
+###  Clone the repo  
+```bash
+git clone https://github.com/your-username/MFP-LLM.git
+cd MFP-LLM
 
