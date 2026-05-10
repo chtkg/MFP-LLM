@@ -1,0 +1,93 @@
+date,temp_min_c,temp_max_c,weather_desc,has_precip
+2016-07-01,26,31,sunny,false
+2016-07-02,26,30,cloudy,false
+2016-07-03,26,30,moderate rain then thunderstorms,true
+2016-07-04,27,32,overcast then cloudy,false
+2016-07-05,27,35,thunderstorms then cloudy,true
+2016-07-06,27,34,cloudy,false
+2016-07-07,26,32,showers then cloudy,true
+2016-07-08,27,33,cloudy,false
+2016-07-09,26,30,showers,true
+2016-07-10,26,29,showers then moderate rain,true
+2016-07-11,27,31,cloudy,false
+2016-07-12,27,33,sunny,false
+2016-07-13,27,34,sunny,false
+2016-07-14,27,35,sunny,false
+2016-07-15,28,36,sunny,false
+2016-07-16,28,37,sunny,false
+2016-07-17,29,38,sunny,false
+2016-07-18,29,38,sunny,false
+2016-07-19,29,38,sunny,false
+2016-07-20,29,39,sunny,false
+2016-07-21,30,39,sunny,false
+2016-07-22,30,39,sunny,false
+2016-07-23,30,40,sunny,false
+2016-07-24,30,40,sunny,false
+2016-07-25,30,40,sunny,false
+2016-07-26,30,40,sunny,false
+2016-07-27,30,40,sunny,false
+2016-07-28,30,40,sunny,false
+2016-07-29,30,40,sunny,false
+2016-07-30,29,39,sunny,false
+2016-07-31,28,38,cloudy,false
+2016-08-01,28,36,sunny,false
+2016-08-02,28,35,sunny,false
+2016-08-03,26,32,moderate rain,true
+2016-08-04,27,32,thunderstorms,true
+2016-08-05,27,33,thunderstorms,true
+2016-08-06,27,33,cloudy,false
+2016-08-07,27,34,cloudy,false
+2016-08-08,27,34,showers,true
+2016-08-09,28,34,cloudy,false
+2016-08-10,28,34,cloudy,false
+2016-08-11,28,35,sunny,false
+2016-08-12,28,36,sunny,false
+2016-08-13,29,37,sunny,false
+2016-08-14,29,37,sunny,false
+2016-08-15,29,36,sunny,false
+2016-08-16,29,36,sunny,false
+2016-08-17,29,36,sunny,false
+2016-08-18,29,36,sunny,false
+2016-08-19,28,36,sunny,false
+2016-08-20,28,36,sunny,false
+2016-08-21,28,36,cloudy,false
+2016-08-22,28,35,cloudy,false
+2016-08-23,27,35,cloudy,false
+2016-08-24,27,35,cloudy,false
+2016-08-25,26,34,cloudy,false
+2016-08-26,25,32,cloudy,false
+2016-08-27,24,30,cloudy,false
+2016-08-28,22,28,cloudy,false
+2016-08-29,23,29,cloudy,false
+2016-08-30,24,30,cloudy,false
+2016-08-31,25,31,cloudy,false
+2016-09-01,26,33,cloudy,false
+2016-09-02,25,34,sunny,false
+2016-09-03,25,35,sunny,false
+2016-09-04,25,33,cloudy,false
+2016-09-05,25,30,light rain,true
+2016-09-06,22,27,showers,true
+2016-09-07,20,24,light rain,true
+2016-09-08,22,29,cloudy,false
+2016-09-09,23,31,cloudy,false
+2016-09-10,24,29,overcast,false
+2016-09-11,23,28,showers,true
+2016-09-12,22,27,thunderstorms,true
+2016-09-13,21,26,light rain,true
+2016-09-14,20,25,light rain,true
+2016-09-15,19,24,overcast,false
+2016-09-16,20,25,cloudy,false
+2016-09-17,21,27,cloudy,false
+2016-09-18,22,28,sunny,false
+2016-09-19,23,29,sunny,false
+2016-09-20,24,30,sunny,false
+2016-09-21,24,31,sunny,false
+2016-09-22,25,32,sunny,false
+2016-09-23,25,33,sunny,false
+2016-09-24,25,32,cloudy,false
+2016-09-25,24,30,light rain,true
+2016-09-26,22,28,moderate rain,true
+2016-09-27,21,26,heavy rain,true
+2016-09-28,20,25,rainstorm,true
+2016-09-29,19,24,light rain,true
+2016-09-30,18,23,overcast,false
