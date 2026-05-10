@@ -32,7 +32,10 @@ We use two large-scale real-world metro datasets:
   - Duration: **Jul 1 – Sep 30, 2016**  
   - **288 stations**, high spatiotemporal resolution  
   - Time resolution: **15-minute intervals**  
-  - Provides fine-grained passenger flow dynamics  
+  - Provides fine-grained passenger flow dynamics
+## Dataset Download
+Baidu Netdisk: [https://pan.baidu.com/s/1lesAk4WOfBQtg0a0XgDfvA](https://pan.baidu.com/s/1lesAk4WOfBQtg0a0XgDfvA)  
+Extraction code: **np5p**
 
 For more implementation details, refer to run_MFP-LLM.py.
 
