@@ -1,4 +1,4 @@
-# Explainable Urban Metro Flow Prediction via Spatio-Temporal Graph Learning and Large Language Models  
+# Interpretable Urban Metro Flow Prediction via Spatio-Temporal Graph Learning and Large Language Models  
 
 This repository contains the official implementation of **MFP-LLM**, a novel framework for **urban metro passenger flow prediction** that integrates **spatio-temporal graph learning** with **instruction-driven large language models (LLMs)**.  
 
