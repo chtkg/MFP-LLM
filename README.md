@@ -1,70 +1,84 @@
-# Interpretable Urban Metro Flow Prediction via Spatio-Temporal Graph Learning and Large Language Models  
+# TRACE: Traceable Reasoning with Aligned Chain of Evidence for Metro Flow Prediction
 
-This repository contains the official implementation of **MFP-LLM**, a novel framework for **urban metro passenger flow prediction** that integrates **spatio-temporal graph learning** with **instruction-driven large language models (LLMs)**.  
 
-🚇 The goal is to achieve **accurate, robust, and interpretable** metro flow prediction under full, few-shot, and zero-shot settings.  
+## Overview
 
----
+TRACE makes LLM-based metro flow predictions verifiable by decomposing every forecast into a set of traceable spatio-temporal points. The framework consists of five stages:
 
-## ✨ Key Features  
+1. **Spatio-Temporal Encoding** — Attention-based encoder with Chebyshev graph convolution
+2. **Feature-to-Evidence Mapping** — Prefix Pooling + Soft Dictionary Projection (SDP)
+3. **LLM-based Prediction** — Frozen LLaMA-2-7B with LoRA fine-tuning + MLP regression head
+4. **Evidence Back-Projection** — Quantifying and tracing each evidence token's contribution to original station-time positions
+5. **Explanation Generation** — Structured prompt template for causally grounded natural language explanations
 
-- **Spatio-Temporal Encoder**: Attention-based encoder that jointly captures spatial and temporal dependencies in metro networks.  
-- **Representation Alignment Module**: Transforms structured spatiotemporal features into token sequences compatible with LLMs.  
-- **LLM-Enhanced Prediction**: Leverages reasoning and generalization capabilities of pre-trained LLMs with minimal task-specific fine-tuning.  
-- **Interpretability**: Generates **natural language explanations** of prediction results to improve transparency and decision support.  
-- **Strong Generalization**: Robust performance across datasets and unseen conditions.  
 
----
+## Datasets
 
-## 📊 Datasets  
+| Dataset | Stations | Duration |
+|---------|----------|----------|
+| Hangzhou Metro (HZMetro) | 80 | Jan 1–25, 2019 |
+| Shanghai Metro (SHMetro) | 288 | Jul 1–Sep 30, 2016 |
 
-We use two large-scale real-world metro datasets:  
+**Download:** [Baidu Netdisk](https://pan.baidu.com/s/1lesAk4WOfBQtg0a0XgDfvA) (Extraction code: `np5p`)
 
-- **HZMetro** 
-  - Hangzhou Metro system  
-  - Duration: **Jan 1 – Jan 25, 2019 (25 days)**  
-  - **80 stations**, aggregated traffic statistics  
-  - Time resolution: **15-minute intervals**  
-  - Records both **inflow** and **outflow** of passengers  
+Place the downloaded data in `./data/` directory.
 
-- **SHMetro**  
-  - Shanghai Metro system  
-  - Duration: **Jul 1 – Sep 30, 2016**  
-  - **288 stations**, high spatiotemporal resolution  
-  - Time resolution: **15-minute intervals**  
-  - Provides fine-grained passenger flow dynamics
-## Dataset Download
-Baidu Netdisk: [https://pan.baidu.com/s/1lesAk4WOfBQtg0a0XgDfvA](https://pan.baidu.com/s/1lesAk4WOfBQtg0a0XgDfvA)  
-Extraction code: **np5p**
+## Requirements
 
-For more implementation details, refer to run_MFP-LLM.py.
+- Python 3.9+
+- PyTorch 2.0+
+- Transformers 4.30+
+- CUDA 11.8+ (RTX 4090 recommended, 24GB VRAM)
 
-Installation
+Install dependencies:
 
-Requirements
-
-torch==2.2.2
-
-accelerate==0.28.0
-
-matplotlib==3.7.0
-
-numpy==1.23.5
-
-pandas==1.5.3
-
-scikit_learn==1.2.2
-
-tqdm==4.65.0
-
-transformers==4.31.0
-
-deepspeed==0.14.0
-
-## 🚀 Quick Start  
-
-###  Clone the repo  
 ```bash
-git clone https://github.com/your-username/MFP-LLM.git
-cd MFP-LLM
+pip install -r requirements.txt
+```
+
+## Quick Start
+
+### 1. Data Preparation
+Place the downloaded datasets in `./data/`.
+
+### 2. Training
+```bash
+python run.py --dataset hzmetro --config configs/default.yaml
+```
+
+### 3. Evaluation
+```bash
+python run.py --dataset hzmetro --mode eval --checkpoint ./checkpoints/best.pt
+```
+
+### 4. Zero-Shot Transfer
+```bash
+python run.py --dataset shmetro --mode eval --checkpoint ./checkpoints/hzmetro_best.pt
+```
+
+## Reproducing Results
+
+To reproduce all experimental results:
+
+```bash
+bash scripts/reproduce_all.sh
+```
+
+This script runs the following experiments sequentially:
+- Overall Performance (Hangzhou & Shanghai)
+- Ablation Study
+- Zero-Shot Forecasting
+- Explanation Quality Evaluation
+
+## Key Hyperparameters
+
+| Parameter | Value |
+|-----------|-------|
+| LoRA rank | 8 |
+| Learning rate | 2e-4 |
+| Input length | 4 steps (1 hour) |
+| Prefix tokens | 64 |
+| LLM backbone | LLaMA-2-7B |
+
+
 
